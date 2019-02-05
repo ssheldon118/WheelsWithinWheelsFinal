@@ -38,8 +38,8 @@ while (running){
     case "addrp":
         switch stringArray[2]{
         case "silver": bikelist.append(RepairPrice(stringArray[1], .silver, Double(stringArray[3])!, Int(stringArray[3])!))
-        case "gold": bikelist.append(RepairPrice(stringArray[1], .gold, Double(stringArray[3])!, 4))
-        case "platinum": bikelist.append(RepairPrice(stringArray[1], .platinum, Double(stringArray[3])!, 4))
+        case "gold": bikelist.append(RepairPrice(stringArray[1], .gold, Double(stringArray[3])!, Int(stringArray[3])!))
+        case "platinum": bikelist.append(RepairPrice(stringArray[1], .platinum, Double(stringArray[3])!, Int(stringArray[3])!))
         default:
             break
         }
