@@ -12,62 +12,46 @@ import Foundation
 var accounts = Accounts()
 var orders = Orders()
 var running = true
+
+
 var customer = Customer(("Stephen", "Sheldon"), "ssheldon118@gmail.com")
 var bike = bikelist[0]
 var order = Order(customer, bike, Date())
-
 accounts.store.append(customer)
-
 orders.addOrder(order, .gold)
-//orders.payOrder(customer, order, 50)
-/*
- //print(accounts.store)
- for i in accounts.store{
- print(i)
- }
- //print(orders.orders)
- 
- print( 8.bitWidth / 64)
- */
+
 print("Welcome to Wheels within wheels!\nEnter customer email to access or create account.\nEnter 'recievable' to accsess all outstanding payments. \nEnter 'instore' to view all bikes that have not been yet picked up.")
 
 while (running){
-    
     print(".........")
     let input = readLine()
     let stringArray = splitStringIntoParts(input!)
     
-    switch input{
+    while(running){
+    switch stringArray[0]{
     case "quit":
-        if let account = accounts.store.first(where: { $0.email == response }){
-        //let stringArra = input!.components(separatedBy: CharacterSet.decimalDigits.inverted)
-        let stringArray = splitStringIntoParts(input!)
-        orders.payOrder(customer, orders.orders.first(where: { $0.orderNumber == Int(stringArray[1]) })!, Double(stringArray[2])!)
-        print("\(account.name.1) paid $\(stringArray[2]) on order # \(Int(stringArray[1]))")
-            print(account)}
+        running = false
         break
-    case let str where str!.contains("new"):
-        let stringArray = splitStringIntoParts(input!)
-        if let bike = bikelist.first(where: { $0.name == stringArray[1] }) {}
-        else {break}
-        var type: TuneUp?
-        
+    case "help":
+        print("help")
+        break
+    case "addrp":
         switch stringArray[2]{
-        case "silver": type = .silver
-        case "gold": type = .gold
-        case "platinum": type = .platinum
+        case "silver": bikelist.append(RepairPrice(stringArray[1], .silver, Double(stringArray[3])!, Int(stringArray[3])!))
+        case "gold": bikelist.append(RepairPrice(stringArray[1], .gold, Double(stringArray[3])!, Int(stringArray[3])!))
+        case "platinum": bikelist.append(RepairPrice(stringArray[1], .platinum, Double(stringArray[3])!, Int(stringArray[3])!))
         default:
             break
         }
         
-        let date = Date()
         
-        orders.addOrder(account, bike, type: type!, date)
-        print(account)
+        break
+    case "addc":
         break
     default:
         print("break")
         break
+    }
     }
 }
     /*
