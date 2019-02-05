@@ -33,4 +33,28 @@ func splitStringIntoParts(_ expression: String) -> [String] {
     return expression.characters.split{$0 == " "}.map{String($0)}
 }
 
+func splitStringIntoLines(_ expression: String) -> [String] {
+    return expression.characters.split{$0 == "\n"}.map { String($0) }
+}
 
+func readTextFile(_ path: String) -> (message: String?, fileText: String?) {
+    let text: String
+    do {
+        text = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
+    }
+    catch {
+        return ("\(error)", nil)
+    }
+    return (nil, text)
+}
+
+func writeTextFile(_ path: String, data: String) -> String? {
+    let url = NSURL.fileURL(withPath: path)
+    do {
+        try data.write(to: url, atomically: true, encoding: String.Encoding.utf8)
+    }
+    catch let error as NSError {
+        return "Failed writing to URL: \(url), Error: " + error.localizedDescription
+    }
+    return nil
+}
