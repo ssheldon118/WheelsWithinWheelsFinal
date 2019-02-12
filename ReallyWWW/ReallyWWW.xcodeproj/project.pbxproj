@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5CC3BEA32213256A0033B0EA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3BEA22213256A0033B0EA /* main.swift */; };
+		5CC3BEB0221326450033B0EA /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3BEAA221326440033B0EA /* Helper.swift */; };
+		5CC3BEB1221326450033B0EA /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3BEAB221326450033B0EA /* Customer.swift */; };
+		5CC3BEB2221326450033B0EA /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3BEAC221326450033B0EA /* Order.swift */; };
+		5CC3BEB3221326450033B0EA /* Pricelist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3BEAD221326450033B0EA /* Pricelist.swift */; };
+		5CC3BEB4221326450033B0EA /* Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3BEAE221326450033B0EA /* Stores.swift */; };
+		5CC3BEBA2213281B0033B0EA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3BEB92213281A0033B0EA /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +29,12 @@
 
 /* Begin PBXFileReference section */
 		5CC3BE9F2213256A0033B0EA /* ReallyWWW */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ReallyWWW; sourceTree = BUILT_PRODUCTS_DIR; };
-		5CC3BEA22213256A0033B0EA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5CC3BEAA221326440033B0EA /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		5CC3BEAB221326450033B0EA /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		5CC3BEAC221326450033B0EA /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		5CC3BEAD221326450033B0EA /* Pricelist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pricelist.swift; sourceTree = "<group>"; };
+		5CC3BEAE221326450033B0EA /* Stores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stores.swift; sourceTree = "<group>"; };
+		5CC3BEB92213281A0033B0EA /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +67,12 @@
 		5CC3BEA12213256A0033B0EA /* ReallyWWW */ = {
 			isa = PBXGroup;
 			children = (
-				5CC3BEA22213256A0033B0EA /* main.swift */,
+				5CC3BEB92213281A0033B0EA /* main.swift */,
+				5CC3BEAB221326450033B0EA /* Customer.swift */,
+				5CC3BEAA221326440033B0EA /* Helper.swift */,
+				5CC3BEAC221326450033B0EA /* Order.swift */,
+				5CC3BEAD221326450033B0EA /* Pricelist.swift */,
+				5CC3BEAE221326450033B0EA /* Stores.swift */,
 			);
 			path = ReallyWWW;
 			sourceTree = "<group>";
@@ -119,7 +134,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CC3BEA32213256A0033B0EA /* main.swift in Sources */,
+				5CC3BEB4221326450033B0EA /* Stores.swift in Sources */,
+				5CC3BEB2221326450033B0EA /* Order.swift in Sources */,
+				5CC3BEBA2213281B0033B0EA /* main.swift in Sources */,
+				5CC3BEB0221326450033B0EA /* Helper.swift in Sources */,
+				5CC3BEB1221326450033B0EA /* Customer.swift in Sources */,
+				5CC3BEB3221326450033B0EA /* Pricelist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
